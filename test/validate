@@ -1,0 +1,23 @@
+import csv
+import os
+
+
+
+def get_data_list():
+  """Load our data list from file."""
+  with open(os.path.join('G:/图片资源/two-stream-action-recognition-keras-master/data/', 'data_list.csv'), 'r') as fin:
+    # with open(os.path.join('/data', 'data_list.csv'), 'r') as fin:
+    reader = csv.reader(fin)
+    data_list = list(reader)
+
+  return data_list
+
+def main():
+  data_list = get_data_list()
+  print(data_list)
+
+
+
+
+if __name__ == '__main__':
+      main()
